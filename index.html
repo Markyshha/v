@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Panorama VR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="viewer"></div>
+
+  <div id="topbar">
+    <div>
+      <strong>Panorama VR</strong>
+      <span id="counter">0 / 0</span>
+    </div>
+    <button id="vrBtn">Войти в VR</button>
+  </div>
+
+  <div id="drop">
+    <div class="drop-title">Кинь сюда панорамы</div>
+    <div class="drop-sub">JPG / JPEG / PNG — можно сразу много файлов</div>
+    <label class="file-btn">
+      Выбрать фотографии
+      <input id="files" type="file" accept="image/jpeg,image/png" multiple hidden>
+    </label>
+    <div class="hint">В VR: A → следующая · B → предыдущая</div>
+  </div>
+
+  <div id="name"></div>
+  <div id="message"></div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
